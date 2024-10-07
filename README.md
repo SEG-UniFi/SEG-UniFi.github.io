@@ -9,7 +9,7 @@ Thomas Boyle - Student Number:
 Mathis Ait Hammou - Student Number:
 Ilyas El Banouri - Student Number:
 Whitney Nsegbe - Student Number
-Omar Touijer - Student Number
+Omar Touijer - 300448953
 
 Product Description:
 An app/website made to help students socialize more. Students can add and see events and gatherings that are happening at their universities. 
