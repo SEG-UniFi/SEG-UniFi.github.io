@@ -1,0 +1,30 @@
+/*LANDING PAGE*/
+ #home {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-image: url("./assets/tempLandingBackground.webp");
+    background-size: cover;
+}
+
+.landingTitle img {
+    width: 40vh;
+    border-radius: 5px;
+}
+
+.landingTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    gap: 50px;
+    margin-right: 50vw;
+}
+
+.landingText h2 {
+    font-size: 100px;
+}
+
+.landingText p {
+    font-size: 80px;
+} 

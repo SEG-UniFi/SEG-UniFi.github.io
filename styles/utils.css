@@ -1,0 +1,81 @@
+/* Styles here have to be for screen smallers than the xs media query  */
+.fill-btn{
+    display: inline-block;
+    background-color: var(--col-light);
+    color: var(--col-black);
+    
+}
+.fill-btn:hover{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.stroke-btn{
+    display: inline-block;
+    background-color: inherit;
+    color: var(--col-black);
+    border: 1px solid var(--col-black);
+}
+.stroke-btn:hover{
+    color: var(--col-light);
+    border: 1px solid var(--col-light);
+}
+
+
+.container {
+    border: 1px solid black;
+    width:100%;
+    margin-left: auto;
+    margin-right:auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+/* xs */
+@media(min-width: 475px){
+    .container{
+        max-width: 475px;
+    }
+}
+
+/* sm */
+@media(min-width: 640px) {
+    .container {
+            max-width: 640px;
+        }
+}
+
+/* md */
+@media(min-width: 768px) {
+     .container{
+        max-width: 768px;
+    }
+}
+
+/* lg */
+@media(min-width: 1024px) {
+     .container{
+        max-width: 1024px;
+    }
+}
+
+/* xl */
+@media(min-width: 1280px) {
+     .container{
+        max-width: 1280px;
+    }
+}
+
+/* 2xl */
+@media(min-width: 1536px) {
+     .container{
+        max-width: 1536px;
+    }
+}

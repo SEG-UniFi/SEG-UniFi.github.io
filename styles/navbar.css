@@ -1,0 +1,36 @@
+/* NAVBAR*/
+ .navbar {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    font-size: 50px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    background-color: rgb(107, 107, 107);
+    border: 2px solid rgb(63, 63, 63);
+}
+
+.navbar li {
+    display: inline;
+    color: rgb(0, 0, 0);
+}
+
+.navbar li img {
+    height: 40px;
+}
+
+.navbar a {
+    float: right;
+    text-decoration: none;
+    color: beige;
+    text-align: right;
+    padding-inline: 10px;
+}
+
+.navbar a:hover {
+    color: white;
+    background: black;
+}
