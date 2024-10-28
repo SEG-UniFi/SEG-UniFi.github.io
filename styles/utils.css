@@ -19,7 +19,7 @@
     border: 1px solid var(--col-light);
 }
 
-
+/* makes sure all our sections are aligned */
 .container {
     border: 1px solid black;
     width:100%;
@@ -30,7 +30,9 @@
 }
 
 
-
+.section{
+    margin-top: 5rem;
+}
 
 
 
@@ -64,6 +66,10 @@
      .container{
         max-width: 1024px;
     }
+    .section {
+        margin-top: 5rem;
+
+    }
 }
 
 /* xl */
@@ -79,3 +85,36 @@
         max-width: 1536px;
     }
 }
+
+
+
+/* clean media queries to add on other pages*/
+/* xs */
+/* @media(min-width: 475px) {
+    
+} */
+
+/* sm */
+/* @media(min-width: 640px) {
+    
+} */
+
+/* md */
+/* @media(min-width: 768px) {
+    
+} */
+
+/* lg */
+/* @media(min-width: 1024px) {
+    
+} */
+
+/* xl */
+/* @media(min-width: 1280px) {
+    
+} */
+
+/* 2xl */
+/* @media(min-width: 1536px) {
+   
+} */

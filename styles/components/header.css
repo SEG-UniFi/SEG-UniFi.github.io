@@ -1,4 +1,4 @@
-/* NAVBAR*/
+/* NAVBAR
  .navbar {
     position: fixed;
     top: -50px;
@@ -33,4 +33,26 @@
 .navbar a:hover {
     color: white;
     background: black;
+} */
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+nav{
+    display: flex;
+}
+.header__menu{
+    border: 1px red solid;
+    display: flex;
+    align-items:center;
+    list-style: none;
+    gap:2em;
+}
+#header__logo{
+    justify-content: flex-start;
+    border: 1px red solid;
 }
