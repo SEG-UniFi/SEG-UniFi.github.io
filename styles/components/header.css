@@ -37,22 +37,31 @@
 
 .header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    /* Space between logo and nav items */
     align-items: center;
+    /* Center items vertically */
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 nav{
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 .header__menu{
     border: 1px red solid;
     display: flex;
     align-items:center;
+    justify-content: flex-end;
+    /* Align nav items to the right */
     list-style: none;
     gap:2em;
 }
+.header__menu li{
+    margin-left: 20px;
+}
 #header__logo{
-    justify-content: flex-start;
+    flex: 0 0 auto;
     border: 1px red solid;
 }

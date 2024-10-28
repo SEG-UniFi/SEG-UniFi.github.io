@@ -4,6 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unifi</title>
+    <link rel="stylesheet" href="styles/components/index.css">
+    <link rel="stylesheet" href="styles/components/overview.css">
     <link rel="stylesheet" href="styles/modern-normalize.css">
     <link rel="stylesheet" href="styles/utils.css">
     <link rel="stylesheet" href="styles/components/header.css">
@@ -18,11 +20,11 @@
 <body>
     <header>
         <div class="header container">
+            
             <nav>
-                <div id="header__logo">
-                    <a href="">Unifi</a>
-                </div>
-
+            <div id="header__logo">
+                Unifi
+            </div>
                  <ul class="header__menu">
                         <li><a href="#forum">Forum</a></li>
                         <li><a href="#about">About</a></li>
@@ -34,13 +36,44 @@
     </header>
 
     <main>
-        <!-- <section id="home" class="container">
-            
-        </section> -->
+        <section id="landing" class="landing container section">
+            <div> 
+                <h1 class="landing__text"><span>Find</span> Your People,  Discover Your <span>City</span>.</h1>
+                <p>UniFi helps students and newcomers connect, explore, and build meaningful friendships while discovering everything your
+                city and campus have to offer.</p>
+                <br>
+                <p>Explore your campus, connect with like-minded people, and dive into your city’s hidden gems – all with the help of
+                UniFi.</p>
+                <button class="fill-btn"> Learn more </button>
+                <button class="stroke-btn"> View the stats</button>
+            </div>
+            <div class="landing__image">
+                <img src="assets/homepage-image1.png" alt="">
 
-        <!-- <section id="home" class="container section">
+            </div>
+        </section>
 
-        </section> -->
+        <section id="overview" class="overview container section">
+            <div class="overview__feature1">
+                <div>
+                    <h2>Stay in the loop with upcoming events happening around your campus</h2>
+                    <p>From <span>cultural festivals</span> to <span>casual meet-ups</span>, UniFi provides
+                    real-time updates on activities that cater to your interests, so you never miss an opportunity to engage with your
+                    community</p>
+                </div>
+            </div>
+            <div class="overview__image">
+                <h1 class="overview__image__title">Explore Local Events</h1>
+                <img src="/assets/overview-image1.png" alt="" >
+            </div>
+            <div class="overview__feature2">
+                <div>
+                    <h2>Enjoy <span>tailored suggestions</span> based on your interests</h2>
+                    <p>Explore new cafes, parks, and attractions in your area, all curated to enhance your experience as a newcomer ensuring you discover places and activities you’ll love</p>
+                </div>
+            </div>
+            <!-- add transition to p text -->
+        </section>
     </main>
 
     <!--     

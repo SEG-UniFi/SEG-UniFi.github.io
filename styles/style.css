@@ -36,7 +36,8 @@ html {
 
 body {
     font-family: "Questrial", sans-serif;
-    }
+    height: 200vh;
+}
         
 h1,
 h2,
@@ -70,7 +71,7 @@ button {
     text-decoration: none;
     /* gets color of parent element */
 }
-strong{
+span{
     color: var(--col-orange);
     font-weight: 600;
 }

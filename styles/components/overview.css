@@ -1,0 +1,29 @@
+.overview{
+    display: flex;
+}
+.overview div{
+    width: 80%;
+}
+.overview__feature1, .overview__feature2{
+        display: flex;
+        justify-content: center;
+        /* Horizontal center */
+        align-items: center;
+        /* Vertical center */
+        height: 100vh;
+        /* Full viewport height */
+    
+}
+.overview__image {
+    width: 80%;
+}
+
+.overview__image img {
+    
+    margin: 0 auto;
+    width: 100%;
+}
+.overview__image__title{
+    font-size: var(--size-4xl);
+    text-align: center;
+}

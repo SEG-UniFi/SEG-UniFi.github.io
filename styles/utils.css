@@ -1,7 +1,7 @@
 /* Styles here have to be for screen smallers than the xs media query  */
 .fill-btn{
     display: inline-block;
-    background-color: var(--col-light);
+    background-color: var(--col-orange);
     color: var(--col-black);
     
 }
@@ -16,7 +16,7 @@
 }
 .stroke-btn:hover{
     color: var(--col-light);
-    border: 1px solid var(--col-light);
+    border: 1px solid var(--col-orange);
 }
 
 /* makes sure all our sections are aligned */
@@ -31,7 +31,7 @@
 
 
 .section{
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 
