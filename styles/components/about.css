@@ -1,17 +1,29 @@
 html,body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 #about {
     width: 100vw;
     height: 100%;
-    background: #e9bb7373;
+    background: #fbd59973;
+}
+
+.Header{
+    font-size: 4rem;
+    padding-top: 5vh;
+    margin: 0;
+    margin-left: 3vw;
+}
+
+.txt{
+    margin-left: 3vw;
 }
 
 /*TEAMCARDS*/
 .Cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -19,27 +31,77 @@ html,body {
 .teamCard {
     border: 3px solid #ECBE74;
     border-radius: 30px;
-    box-shadow: 5px 5px 5px rgb(85, 85, 85);
+    box-shadow: 5px 5px 5px #555555;
     padding: 10px;
-    margin: 50px;
+    margin: 2vw;
     text-align: center;
-    max-width: 25vw;
-    height: 40vh;
+    max-width: 20vw;
+    height: 300px;
     overflow: hidden;
     background-color: white;
 }
 
-.teamCard img {
+.pfp {
     max-width: 50%;
     height: auto;
     margin-top: 20px;
+    border-radius: 50%;
+}
+
+.teamCard h2 {
+    margin-bottom: 0;
 }
 
 .teamCard h3 {
     color: #ECBE74;
+    margin-top: 0;
 }
 
 .teamCard p {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-inline: 10px;
+    margin: 0;
+}
+
+.teamCard hr{
+    border: 2px solid gray;
+    border-radius: 5px;
+    max-width: 40%;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.link {
+    border-radius: 50%;
+    width: 5vw;
+    height: auto;
+    padding-inline: 0.5vw;
+}
+
+/*GROUPS*/
+.group1 {
+    margin-left: 1vw;
+}
+
+.group2 {
+    /*first # is cards(20vw per), second # is margins(2vw on either side of card + margin left)*/
+    margin-left: calc(20vw + 5vw);
+}
+
+.group3 {
+    margin-left: calc(40vw + 9vw);
+}
+
+.group1,.group2,.group3 {
+    display: flex;
+    flex-direction: row;
+    background: #ffc880;
+    border-radius: 15%;
+    margin-bottom: 2vh;
+    max-width: 48vw;
+    height: 350px;
 }
