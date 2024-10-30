@@ -3,14 +3,8 @@ html,body {
     overflow-x: hidden;
 }
 
-#about {
-    width: 100vw;
-    height: 100%;
-    /*background: #fbd59973;*/
-}
-
 .Header{
-    font-size: 4rem;
+    font-size: var(--size-7xl);
     padding-top: 5vh;
     margin: 0;
     margin-left: 3vw;
@@ -20,88 +14,87 @@ html,body {
     margin-left: 3vw;
 }
 
-/*TEAMCARDS*/
+/*--------------TEAMCARDS*/
 .Cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .teamCard {
-    border: 3px solid #ECBE74;
-    border-radius: 30px;
-    box-shadow: 5px 5px 5px #555555;
-    padding: 10px;
-    margin: 2vw;
-    text-align: center;
-    max-width: 20vw;
-    height: 300px;
+    border: 1px solid red;
+    max-width: 23vw;
+    height: 35vw;
     overflow: hidden;
-    background-color: white;
+    position: relative;
 }
 
-.pfp {
-    max-width: 50%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 50%;
+/*images*/
+.teamCard img {
+    max-width: 23vw;
+    height: 35vw;
 }
 
-.teamCard h2 {
-    margin-bottom: 0;
+.teamCard:hover .image{
+    filter: blur(4px);
 }
 
-.teamCard h3 {
-    color: #ECBE74;
-    margin-top: 0;
-}
-
-.teamCard p {
-    padding-inline: 10px;
-    margin: 0;
+/*text*/
+.name {
+    position: absolute;
+    margin-left: 2vw;
+    top: 25vw;
+    font-size: 4vw;
 }
 
 .teamCard hr{
-    border: 2px solid gray;
+    position: absolute;
+    margin-left: 2vw;
+    top: 29.5vw;
+    border: 1px solid black;
     border-radius: 5px;
-    max-width: 40%;
+    width: 19vw;
 }
 
-.links {
+.role {
+    position: absolute;
+    margin-left: 2vw;
+    top: 30vw;
+    font-size: 2vw;
+}
+
+.hidden1 {
+    position: absolute;
+    margin-left: 2vw;
+    top: 26vw;
+    font-size: 3vw;
+    display: none;
+    color: black;
+}
+.hidden2 {
+    position: absolute;
+    margin-left: 2vw;
+    top: 30vw;
+    font-size: 3vw;
+    display: none;
+    color: black;
+}
+
+.teamCard:hover .name, .teamCard:hover .role{
+    display: none;
+}
+
+.teamCard:hover .hidden1, .teamCard:hover .hidden2 {
+    display: block;
+}
+
+
+/*------------------GROUPS*/
+.group1,.group2{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-top: 2vh;
-}
-
-.link {
-    border-radius: 50%;
-    width: 5vw;
-    height: auto;
-    padding-inline: 0.5vw;
-}
-
-/*GROUPS*/
-.group1 {
-    margin-left: 1vw;
-}
-
-.group2 {
-    /*first # is cards(20vw per), second # is margins(2vw on either side of card + margin left)*/
-    margin-left: calc(20vw + 5vw);
-}
-
-.group3 {
-    margin-left: calc(40vw + 9vw);
-}
-
-.group1,.group2,.group3 {
-    display: flex;
-    flex-direction: row;
-    background: #ffc880;
-    border-radius: 15%;
-    margin-bottom: 2vh;
-    max-width: 48vw;
-    height: 350px;
+    width: 100vw;
+    height: 35vw;
+    margin-left: 3vw;
 }
