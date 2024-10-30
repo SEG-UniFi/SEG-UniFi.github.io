@@ -92,15 +92,11 @@ html,body {
     margin-left: calc(20vw + 5vw);
 }
 
-.group3 {
-    margin-left: calc(40vw + 9vw);
-}
-
-.group1,.group2,.group3 {
+.group1,.group2 {
     display: flex;
     flex-direction: row;
     background: #ffc880;
-    border-radius: 15%;
+    border-radius: 25px;
     margin-bottom: 2vh;
     max-width: 48vw;
     height: 350px;
