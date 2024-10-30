@@ -15,7 +15,7 @@
     border: 1px solid var(--col-black);
 }
 .stroke-btn:hover{
-    color: var(--col-light);
+    color: var(--col-orange);
     border: 1px solid var(--col-orange);
 }
 
@@ -31,7 +31,7 @@
 
 
 .section{
-    margin-top: 2rem;
+    /* margin-top: rem; */
 }
 
 

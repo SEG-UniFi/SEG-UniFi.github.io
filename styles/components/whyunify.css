@@ -1,0 +1,43 @@
+.why-unify__one{
+    text-align: center;
+    font-size: var(--size-xl);
+}
+.why-unify__header{
+}
+
+.why-unify__header .why-unify__image{
+    width:220%;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Horizontal center */
+        align-items: center;
+        /* Vertical center */
+        height: 100vh;
+        /* Full viewport height */
+}
+.why-unify__image img{
+    width: 100%;
+}
+.why-unify__one p{
+    text-align: center;
+    margin: 10px auto;
+}
+.why-unify__two {
+    display: flex;
+    justify-content: space-around;
+}
+.why-unify__two div{
+    width: 40%;
+    text-align: center;
+    padding: 40px;
+    
+}
+.why-unify__two div h2{
+    margin: 0 auto;
+    font-size: var(--size-5xl);
+    color: var(--col-orange);
+}
+.why-unify__two div p{
+    font-size: var(--size-xl);
+}

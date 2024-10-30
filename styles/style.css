@@ -3,6 +3,7 @@
     --col-orange:#da9958 ;
     --col-light:#ecbe74 ;
     --col-black:#000000 ;
+    --col-white:#ffffff;
 
     /* sizes */
     --size-xxs: 0.5rem;
@@ -35,10 +36,12 @@ html {
 }
 
 body {
+    background-attachment: fixed;
+    /* Locks background to the viewport */
+    color: var(--col-black);
     font-family: "Questrial", sans-serif;
-    height: 200vh;
 }
-        
+
 h1,
 h2,
 h3,
@@ -76,10 +79,8 @@ span{
     font-weight: 600;
 }
 a{
-    color: var(--col-orange);
-    font-weight: 600;
+    text-decoration: none;
 }
-
 
 /* copied styles */
 

@@ -19,11 +19,35 @@
 }
 
 .overview__image img {
-    
     margin: 0 auto;
     width: 100%;
 }
 .overview__image__title{
     font-size: var(--size-4xl);
     text-align: center;
+}
+
+
+.overview-two{
+    display: flex;
+}
+.overview-two__feature{
+    display: flex;
+    justify-content: center;
+    /* Horizontal center */
+    align-items: center;
+    /* Vertical center */
+    height: 100vh;
+    /* Full viewport height */
+    width:70%;
+}
+.overview-two__feature div h2{
+    font-size: var(--size-4xl);
+}
+.overview-two__image {
+    width: 70%;
+}
+.overview-two__image img {
+    margin: 0 auto;
+    width: 100%;
 }

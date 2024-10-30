@@ -1,40 +1,3 @@
-/* NAVBAR
- .navbar {
-    position: fixed;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    font-size: 50px;
-    z-index: 1000;
-}
-
-.navbar ul {
-    background-color: rgb(107, 107, 107);
-    border: 2px solid rgb(63, 63, 63);
-}
-
-.navbar li {
-    display: inline;
-    color: rgb(0, 0, 0);
-}
-
-.navbar li img {
-    height: 40px;
-}
-
-.navbar a {
-    float: right;
-    text-decoration: none;
-    color: beige;
-    text-align: right;
-    padding-inline: 10px;
-}
-
-.navbar a:hover {
-    color: white;
-    background: black;
-} */
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -45,12 +8,12 @@
     padding-bottom: 2rem;
 }
 nav{
+    font-size: var(--size-xl);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 .header__menu{
-    border: 1px red solid;
     display: flex;
     align-items:center;
     justify-content: flex-end;
@@ -60,6 +23,16 @@ nav{
 }
 .header__menu li{
     margin-left: 20px;
+}
+.header__menu li a{
+    transition: transform 0.5s ease, color 0.5s ease;
+        /* Smooth transition with increased duration */
+    color: var(--col-black);
+}
+.header__menu li a:hover{
+    color: var(--col-orange);
+    /* Change color on hover */
+
 }
 #header__logo{
     flex: 0 0 auto;

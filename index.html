@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unifi</title>
     <link rel="stylesheet" href="styles/components/index.css">
+    <link rel="stylesheet" href="styles/components/whyunify.css">
     <link rel="stylesheet" href="styles/components/overview.css">
     <link rel="stylesheet" href="styles/modern-normalize.css">
-    <link rel="stylesheet" href="styles/utils.css">
     <link rel="stylesheet" href="styles/components/header.css">
     <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- add other styles beforw this bc utils need to have the highest priority -->
+    <link rel="stylesheet" href="styles/utils.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap"
@@ -36,7 +39,7 @@
     </header>
 
     <main>
-        <section id="landing" class="landing container section">
+        <section id="landing" class="landing container section ">
             <div> 
                 <h1 class="landing__text"><span>Find</span> Your People,  Discover Your <span>City</span>.</h1>
                 <p>UniFi helps students and newcomers connect, explore, and build meaningful friendships while discovering everything your
@@ -51,6 +54,37 @@
                 <img src="assets/homepage-image1.png" alt="">
 
             </div>
+        </section>
+
+        <section id="why-unify" class="why-unify container section">
+            <div class="why-unify__header">
+                <!-- <div class="why-unif__one"> -->
+                    <!-- <div>
+                        <h2>Best app to discover, organize, and engage</h2>
+                      <p>with local events in real-time, making it easier than ever to connect with your community and never miss out on what’s
+                        happening around you </p> -->
+                    <!-- </div>  -->
+                    <div class="why-unify__two">
+                        <div>
+                            <h2 class="counter" data-target="1040985">0</h2>
+                            <p>International students in Canada</p>
+                        </div>
+                    
+                        <div>
+                            <h2 class="counter" data-target="400">0+</h2>
+                            <p>Daily events</p>
+                        </div>
+                    
+                        <div>
+                            <h2 class="counter" data-target="450">0</h2>
+                            <p>Ethnic or cultural origins</p>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <!-- <div class="why-unify__image">
+                <img src="/assets/why-unify.png" alt="">
+            </div> -->
         </section>
 
         <section id="overview" class="overview container section">
@@ -74,6 +108,40 @@
             </div>
             <!-- add transition to p text -->
         </section>
+
+        <section id="overview-two" class="overview-two container section">
+            <div class="overview-two__feature">
+                <div>
+                    <h2><span>Group Activities </span>Made Easy</h2>
+                    <p>
+                        Create or join group events tailored for students, such as study sessions, game nights, or local outings. UniFi
+                        simplifies the process, so you can quickly gather your crew or meet new people without the hassle.
+                    </p>
+                </div>
+            </div>
+            <div class="overview-two__image">   
+                <img src="/assets/overview-image2.png" alt="">
+            </div>
+            <!-- add transition to p text -->
+        </section>
+
+        <section id="overview-two" class="overview-two container section">
+            <div class="overview-two__image">
+                <img src="/assets/overview-image3.png" alt="">
+            </div>
+
+            <div class="overview-two__feature">
+                <div>
+                    <h2>Get Personalized Recommendations</h2>
+                    <p>
+                        UniFi tailors suggestions based on your interests, ensuring you discover places and activities you’ll love. Explore new
+                        <span>events, parties, and activities</span> in your area, all curated to enhance your experience as a newcomer or enhance your social life.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- add transition to p text -->
+        </section>
     </main>
 
     <!--     
@@ -83,7 +151,9 @@
 
 
 
-    <script type="module" src="/main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+    <script type="module" src="src/main.js"></script>
 
 </body>
 
