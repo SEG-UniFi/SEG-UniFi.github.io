@@ -25,15 +25,20 @@ html,body {
 .teamCard {
     border: 1px solid red;
     max-width: 23vw;
-    height: 35vw;
+    height: 30vw;
     overflow: hidden;
     position: relative;
 }
 
 /*images*/
 .teamCard img {
+    width: 23vw;
+    height: 30vw;
+}
+
+.logo{
     max-width: 23vw;
-    height: 35vw;
+    height: 30vw;
 }
 
 .teamCard:hover .image{
@@ -44,14 +49,14 @@ html,body {
 .name {
     position: absolute;
     margin-left: 2vw;
-    top: 25vw;
+    top: 20vw;
     font-size: 4vw;
 }
 
 .teamCard hr{
     position: absolute;
     margin-left: 2vw;
-    top: 29.5vw;
+    top: 24.5vw;
     border: 1px solid black;
     border-radius: 5px;
     width: 19vw;
@@ -60,14 +65,14 @@ html,body {
 .role {
     position: absolute;
     margin-left: 2vw;
-    top: 30vw;
+    top: 25vw;
     font-size: 2vw;
 }
 
 .hidden1 {
     position: absolute;
     margin-left: 2vw;
-    top: 26vw;
+    top: 21vw;
     font-size: 3vw;
     display: none;
     color: black;
@@ -75,7 +80,7 @@ html,body {
 .hidden2 {
     position: absolute;
     margin-left: 2vw;
-    top: 30vw;
+    top: 25vw;
     font-size: 3vw;
     display: none;
     color: black;
@@ -95,6 +100,6 @@ html,body {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 35vw;
+    height: 30vw;
     margin-left: 3vw;
 }
