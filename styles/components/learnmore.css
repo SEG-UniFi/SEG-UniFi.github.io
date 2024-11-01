@@ -1,0 +1,13 @@
+.learn-more__image{
+    width: 70%;
+}
+.learn-more__image img{
+    width: 100%;
+}
+.CTA{
+    display: flex;
+}
+.CTA h3{
+    font-size: var(--size-4xl);
+    display: flex;
+}

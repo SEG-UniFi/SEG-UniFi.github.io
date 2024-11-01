@@ -1,9 +1,8 @@
 .why-unify__one{
     text-align: center;
-    font-size: var(--size-xl);
+    font-size: var(--size-2xl);
 }
-.why-unify__header{
-}
+
 
 .why-unify__header .why-unify__image{
     width:220%;
@@ -20,6 +19,7 @@
     width: 100%;
 }
 .why-unify__one p{
+    font-size: var(--size-xl);
     text-align: center;
     margin: 10px auto;
 }

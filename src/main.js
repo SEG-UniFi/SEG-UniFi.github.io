@@ -6,16 +6,14 @@
       const scrollPercent = scrollTop / docHeight; // Scroll progress (0 to 1)
 
       // Calculate color based on scroll
-     const startColor = [241, 197, 175]; // #f1c5af (RGB)
-     const endColor = [255, 231, 220];   // #ffe7dc (RGB)
+     const startColor = [247,179,135]; 
+     const endColor = [208, 139, 88];  
       const currentColor = startColor.map((start, i) =>
         Math.round(start + (endColor[i] - start) * scrollPercent)
       );
-
       // Apply dynamic gradient
       document.body.style.background = `linear-gradient(to bottom, rgb(${currentColor.join(',')}), #fff)`;}
  )
-
 // index page counter animation
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counter');
