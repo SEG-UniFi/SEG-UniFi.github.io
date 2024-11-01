@@ -37,16 +37,11 @@ html {
     justify-content: center;
     width: 35vw;
     margin-left: 10vw;
-    margin-top: 10vh;
 }
 
 .inputField input{
-    padding: 2vh;
-    margin: 1vh;
-}
-
-#message{
-    padding-bottom: 20vh;
+    padding: 2vw;
+    margin: 1vw;
 }
 
 .inputField h2 {
@@ -64,8 +59,8 @@ html {
 
 /*IMAGE*/
 .img {
-   max-width: 40vw; 
-   height: 50vw;
-   margin-top: 5vw;
+   max-width: 30vw; 
+   height: 40vw;
+   margin-top: 2vw;
    margin-left: 3vw;
 }
