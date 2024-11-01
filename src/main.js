@@ -6,7 +6,7 @@
       const scrollPercent = scrollTop / docHeight; // Scroll progress (0 to 1)
 
       // Calculate color based on scroll
-     const startColor = [247,179,135]; 
+     const startColor = []; 
      const endColor = [208, 139, 88];  
       const currentColor = startColor.map((start, i) =>
         Math.round(start + (endColor[i] - start) * scrollPercent)

@@ -2,7 +2,7 @@
 .fill-btn{
     display: inline-block;
     background-color: var(--col-orange);
-    color: var(--col-black);
+    color: var(--col-white);
     
 }
 .fill-btn:hover{
