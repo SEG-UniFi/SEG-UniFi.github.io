@@ -5,7 +5,7 @@
 }
 
 .landing__image{
-    width: 100%;
+    width: 80%;
     margin-left:10%;
     margin-top: -5%;
 }
@@ -14,7 +14,7 @@
 }
 
 h1.landing__text {
-    margin-top: 25%;
+    margin-top: 10%;
     margin-bottom: 5%;
     width: 140%;
     font-size: var(--size-7xl);

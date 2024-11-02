@@ -1,27 +1,12 @@
 .why-unify__one{
+    margin-bottom: 5%;
     text-align: center;
-    font-size: var(--size-2xl);
+    font-size: var(--size-4xl);
 }
 
-
-.why-unify__header .why-unify__image{
-    width:220%;
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* Horizontal center */
-        align-items: center;
-        /* Vertical center */
-        height: 100vh;
-        /* Full viewport height */
-}
-.why-unify__image img{
-    width: 100%;
-}
 .why-unify__one p{
     font-size: var(--size-xl);
-    text-align: center;
-    margin: 10px auto;
+    margin: 5% auto;
 }
 .why-unify__two {
     display: flex;

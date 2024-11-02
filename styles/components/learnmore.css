@@ -1,5 +1,9 @@
+#learn-more{
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
 .learn-more__image{
-    width: 100%;
+    width: 130%;
 }
 .learn-more__image img{
     width: 100%;

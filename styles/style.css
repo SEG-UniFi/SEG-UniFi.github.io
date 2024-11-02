@@ -32,14 +32,13 @@
 
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-attachment: fixed;
-    /* Locks background to the viewport */
     color: var(--col-black);
-    font-family: "Questrial", sans-serif;
+    font-family: "Questrial", sans-serif;    
+    scroll-behavior: smooth;
+
 }
 
 h1,
@@ -81,7 +80,31 @@ span{
 a{
     text-decoration: none;
 }
+/* text transition */
 
+h1,
+h2,
+h3,
+p,
+span,
+li {
+    transition: color 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    /* make text invisible in the beg */
+    transform: translateY(20px);
+    /* move text  down */
+    transition-property: color, opacity, transform;
+    transition-duration: 0.5s;
+    /* change duration as needed */
+}
+
+/* When text is visible  */
+.text-visible {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Move text to original position */
+}
 /* copied styles */
 
 

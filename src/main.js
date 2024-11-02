@@ -6,13 +6,13 @@
       const scrollPercent = scrollTop / docHeight; // Scroll progress (0 to 1)
 
       // Calculate color based on scroll
-     const startColor = []; 
+     const startColor = [254,248,240]; 
      const endColor = [208, 139, 88];  
       const currentColor = startColor.map((start, i) =>
         Math.round(start + (endColor[i] - start) * scrollPercent)
       );
       // Apply dynamic gradient
-      document.body.style.background = `linear-gradient(to bottom, rgb(${currentColor.join(',')}), #fff)`;}
+     document.body.style.background = `linear-gradient(to bottom, rgb(${currentColor.join(',')}), #e9e4e4)`;}
  )
 // index page counter animation
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,4 +65,48 @@ document.addEventListener("DOMContentLoaded", function () {
     }, observerOptions);
 
     observer.observe(document.getElementById('why-unify')); // Observe the section
+});
+
+
+// text transition
+document.addEventListener("DOMContentLoaded", () => {
+    const textElements = document.querySelectorAll("h1, h2, h3, p, span, li");
+
+    const showTextOnScroll = () => {
+        textElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                el.classList.add("text-visible");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", showTextOnScroll);
+    showTextOnScroll(); // Initial call to show elements in view on load
+});
+// smooth scrolling code
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        // Scroll to the  element smoothly
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// navbar
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+
+    if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
