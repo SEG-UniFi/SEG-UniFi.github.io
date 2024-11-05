@@ -23,7 +23,6 @@ html,body {
 }
 
 .teamCard {
-    border: 1px solid red;
     max-width: 23vw;
     height: 30vw;
     overflow: hidden;
