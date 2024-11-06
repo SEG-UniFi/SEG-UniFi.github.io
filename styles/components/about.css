@@ -4,10 +4,14 @@ html,body {
 }
 
 .Header{
-    font-size: var(--size-9xl);
-    padding-top: 5vw;
+    font-size: var(--size-7xl);
+    padding-top: 5vh;
     margin: 0;
-    text-align: center;
+    margin-left: 3vw;
+}
+
+.txt{
+    margin-left: 3vw;
 }
 
 /*--------------TEAMCARDS*/
@@ -94,9 +98,7 @@ html,body {
 .group1,.group2{
     display: flex;
     flex-direction: row;
-    background: #ffc880;
-    border-radius: 15%;
-    margin-bottom: 2vh;
-    max-width: 48vw;
-    height: 350px;
+    width: 100vw;
+    height: 30vw;
+    margin-left: 3vw;
 }
