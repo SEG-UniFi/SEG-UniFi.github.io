@@ -2,7 +2,7 @@
 .fill-btn{
     display: inline-block;
     background-color: var(--col-orange);
-    color: var(--col-black);
+    color: var(--col-white);
     
 }
 .fill-btn:hover{
@@ -15,13 +15,13 @@
     border: 1px solid var(--col-black);
 }
 .stroke-btn:hover{
-    color: var(--col-light);
+    color: var(--col-orange);
     border: 1px solid var(--col-orange);
 }
 
 /* makes sure all our sections are aligned */
 .container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width:100%;
     margin-left: auto;
     margin-right:auto;
@@ -29,10 +29,6 @@
     padding-right: 0.5rem;
 }
 
-
-.section{
-    margin-top: 2rem;
-}
 
 
 

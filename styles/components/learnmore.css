@@ -1,0 +1,36 @@
+#learn-more{
+    margin-top: 7%;
+    margin-bottom: 5%;
+}
+.learn-more__image{
+    width: 130%;
+}
+.learn-more__image img{
+    width: 100%;
+}
+.CTA{
+    display: flex;
+}
+.CTA .signup h3{
+        font-size: var(--size-4xl);
+}
+.CTA .signup{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Horizontal center */
+        align-items: start;
+        height: 70vh;
+        /* Full viewport height */
+}
+.signup input[type="email"] {
+    padding: 12px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    
+}

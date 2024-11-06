@@ -1,0 +1,28 @@
+.why-unify__one{
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: var(--size-4xl);
+}
+
+.why-unify__one p{
+    font-size: var(--size-xl);
+    margin: 5% auto;
+}
+.why-unify__two {
+    display: flex;
+    justify-content: space-around;
+}
+.why-unify__two div{
+    width: 40%;
+    text-align: center;
+    padding: 40px;
+    
+}
+.why-unify__two div h2{
+    margin: 0 auto;
+    font-size: var(--size-5xl);
+    color: var(--col-orange);
+}
+.why-unify__two div p{
+    font-size: var(--size-xl);
+}

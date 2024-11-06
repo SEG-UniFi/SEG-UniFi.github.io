@@ -5,19 +5,25 @@
 }
 
 .landing__image{
-    width: 140%;
+    width: 80%;
     margin-left:10%;
+    margin-top: -5%;
 }
 .landing__image img{
     width: 100%;
 }
 
 h1.landing__text {
-    margin-top: 40%;
+    margin-top: 10%;
     margin-bottom: 5%;
     width: 140%;
     font-size: var(--size-7xl);
 }
+.landing p{
+    font-size: var(--size-xl);
+}
 .landing button{
     margin-top: 5%;
+
 }
+

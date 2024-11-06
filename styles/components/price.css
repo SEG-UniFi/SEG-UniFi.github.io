@@ -1,0 +1,86 @@
+html,body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.Header {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.plansGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.plan {
+    border: 5px solid #ecbe74;
+    border-radius: 15px;
+    width: 20vw;
+    margin: 1vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan h1 {
+    color: #da9958 ;
+}
+
+.plan h2{
+    border: 3px solid #ecbe74;
+    border-radius: 10px;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    color: #da9958 ;
+}
+
+.plan:hover{
+    background: #ecbe74;
+    width: 22vw;
+    height: auto;
+    margin-inline: 0;
+    margin-top: 0;
+}
+
+.plan:hover .crossedOut, .plan:hover p, .plan:hover h2, .plan:hover h1{
+    color: white;
+    text-decoration-color: white ;
+    border-color: white;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 4vw;
+}
+
+.benefit img {
+    max-width: 2vw;
+    height: 2vw;
+    margin-right: 2vw;
+}
+
+.benefit p {
+    font-size: 1.5vw;
+    color: #da9958;
+}
+
+.crossedOut {
+    text-decoration: line-through; 
+    text-decoration-color: #da9958 ;
+    text-decoration-thickness: 0.2vw;
+}
+
+
