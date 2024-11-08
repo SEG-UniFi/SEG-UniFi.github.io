@@ -4,14 +4,10 @@ html,body {
 }
 
 .Header{
-    font-size: var(--size-7xl);
+    font-size: 5vw;
     padding-top: 5vh;
-    margin: 0;
-    margin-left: 3vw;
-}
-
-.txt{
-    margin-left: 3vw;
+    margin-bottom: 2vw;
+    text-align: center;
 }
 
 /*--------------TEAMCARDS*/
@@ -50,13 +46,14 @@ html,body {
     margin-left: 2vw;
     top: 20vw;
     font-size: 4vw;
+    color: white;
 }
 
 .teamCard hr{
     position: absolute;
     margin-left: 2vw;
     top: 24.5vw;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     width: 19vw;
 }
@@ -66,6 +63,7 @@ html,body {
     margin-left: 2vw;
     top: 25vw;
     font-size: 2vw;
+    color: white;
 }
 
 .hidden1 {
@@ -74,7 +72,7 @@ html,body {
     top: 21vw;
     font-size: 3vw;
     display: none;
-    color: black;
+    color: white;
 }
 .hidden2 {
     position: absolute;
@@ -82,7 +80,7 @@ html,body {
     top: 25vw;
     font-size: 3vw;
     display: none;
-    color: black;
+    color: white;
 }
 
 .teamCard:hover .name, .teamCard:hover .role{

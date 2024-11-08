@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="styles/modern-normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-
-
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+ 
     <link rel="stylesheet" href="styles/utils.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap"
@@ -17,24 +18,39 @@
 
 <body>
 
+    <header >
+        <div class="header">
+            <nav id="navbar" class="">
+            <div id="header__logo" >
+                Uni<span>Fi</span>
+            </div>
+                 <ul class="header__menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="price.html">Prices</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
     <section id="about" class="section container">
-        <h1 class="Header">Meet the <span style="color:#da9958">Team:</span></h1>
+        <h1 class="Header">Meet the <span>Team:</span></h1>
     
         <!--TO ADD MORE COPY PASTE w/ NEW INFO ig-->
         <div class = "Cards">
             <div class="group1">
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
-                    <p class="name">Name</pp>
+                <div class="teamCard" style="background-color: #4dd1f7;">
+                    <img class="image" src="./assets/teamPhoto1.png" alt="placeholder">
+                    <p class="name">Darren</pp>
                     <hr>
-                    <p class="role">Role</p>
+                    <p class="role">Rakos</p>
 
                     <a class="hidden1" href="" alt="LinkedIn">LinkedIn</a>
                     <a class="hidden2" href="" alt="Github">Github</a>
                 </div>
 
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
+                <div class="teamCard" style="background-color:#a24df7;">
+                    <img class="image" src="" alt="placeholder">
                     <p class="name">Name</pp>
                         <hr>
                         <p class="role">Role</p>
@@ -43,8 +59,8 @@
                         <a class="hidden2" href="" alt="Github">Github</a>
                 </div>
 
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
+                <div class="teamCard" style="background-color: #f7914d;">
+                    <img class="image" src="" alt="placeholder">
                     <p class="name">Name</pp>
                         <hr>
                         <p class="role">Role</p>
@@ -64,8 +80,8 @@
                     <img class="logo" src="./assets/Unifi.jpg" alt="placeholder">
                 </div>
 
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
+                <div class="teamCard" style="background-color: #4dd1f7;">
+                    <img class="image" src="" alt="placeholder">
                     <p class="name">Name</pp>
                         <hr>
                         <p class="role">Role</p>
@@ -74,8 +90,8 @@
                         <a class="hidden2" href="" alt="Github">Github</a>
                 </div>
 
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
+                <div class="teamCard" style="background-color: #a24df7;">
+                    <img class="image" src="" alt="placeholder">
                     <p class="name">Name</pp>
                         <hr>
                         <p class="role">Role</p>
@@ -84,8 +100,8 @@
                         <a class="hidden2" href="" alt="Github">Github</a>
                 </div>
 
-                <div class="teamCard">
-                    <img class="image" src="./assets/vPlaceholderImg.jpg" alt="placeholder">
+                <div class="teamCard" style="background-color: #f7914d">
+                    <img class="image" src="" alt="placeholder">
                     <p class="name">Name</pp>
                         <hr>
                         <p class="role">Role</p>
@@ -98,6 +114,11 @@
         <!---->
     
     </section>
+
+    <footer>
+        <p>&copy; Unifi 2024</p>
+    </footer>
+    
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
