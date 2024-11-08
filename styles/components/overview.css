@@ -40,13 +40,13 @@
 .overview-two{
     display: flex;
 }
-.overview-two__feature{
+.overview-two__feature, .overview-three__feature{
     display: flex;
     justify-content: center;
     /* Horizontal center */
     align-items: center;
     /* Vertical center */
-    height: 100vh;
+    height: 90vh;
     /* Full viewport height */
     width:70%;
 }
@@ -66,17 +66,6 @@
 
 .overview-two {
     display: flex;
-}
-
-.overview-three__feature {
-    display: flex;
-    justify-content: center;
-    /* Horizontal center */
-    align-items: center;
-    /* Vertical center */
-    height: 100vh;
-    /* Full viewport height */
-    width: 70%;
 }
 
 .overview-three__feature div h2 {

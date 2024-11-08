@@ -10,12 +10,12 @@
 }
 .features-list div{
     border-radius: 20px;
-    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Box shadow */
+    box-shadow: 14px 15px 20px 0px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
-    /* Smooth transition for hover effect */
-    width: 33%;
-    padding: 20px 15px;
+    width: 30%;
+    padding: 30px 15px;
+    background-color: var(--col-white);
+    
     
 }
 
@@ -24,13 +24,18 @@
     justify-content: space-between;
 }
 
+.features-list h2{
+    text-align: center;
+}
 .features-list h3 {
     font-size: var(--size-8xl);
     color:var(--col-orange);
     text-align: center;
 }
+
 .features__intro p{
-    text-align: left;
+    text-align: center;
+    margin-top: 5%;
     margin-bottom:5%;
     font-size: var(--size-xl);
 }

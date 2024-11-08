@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const observerOptions = {
         root: null, // Use the viewport as the root
-        threshold: 0.1 // Trigger when 10% of the section is visible
+        threshold: 0.2 // Trigger when 10% of the section is visible
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Determine increment based on the target value
                     if (target === 1040985) {
-                        increment = 10000; // Increment by 100k for 1,040,985
+                        increment = 9999; // Increment by 9999 for 1,040,985
                     } else {
                         increment = Math.ceil(target / 250); // Default increment for others
                     }
@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // text transition
 document.addEventListener("DOMContentLoaded", () => {
+    const offset = 200
     const textElements = document.querySelectorAll("h1, h2, h3, p, span, li");
 
     const showTextOnScroll = () => {
@@ -86,19 +87,30 @@ document.addEventListener("DOMContentLoaded", () => {
     showTextOnScroll(); // Initial call to show elements in view on load
 });
 // smooth scrolling code
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+        const targetUrl = link.getAttribute("href");
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        // Check if the link is the one that should go to a new page
+        if (targetUrl === "about.html") { // Replace with the specific URL or ID
+            // Navigate directly to the new page
+            event.preventDefault();
+            window.location.href = targetUrl;
+        } else {
+            // Use scrollIntoView for all other links
+            event.preventDefault();
+            const targetId = targetUrl.substring(1); // Get the ID from href
+            const targetElement = document.getElementById(targetId);
 
-        // Scroll to the  element smoothly
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
-        });
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            } else {
+                console.warn(`Element with ID ${targetId} not found.`);
+            }
+        }
     });
 });
+
 
 // navbar
 window.addEventListener('scroll', () => {
