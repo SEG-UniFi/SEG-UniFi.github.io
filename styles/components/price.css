@@ -123,6 +123,14 @@ input:checked + .slider + .sliderTxt {
     font-size: 1.5vw;
 }
 
+.planDescription {
+    margin-inline: 1vw;
+    font-size: 1vw;
+    text-align: center;
+    margin-bottom: 0;
+    height: 6vw;
+}
+
 .plan:hover{
     background: #ecbe74;
     width: 22vw;
@@ -141,7 +149,6 @@ input:checked + .slider + .sliderTxt {
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 
 .benefit {
@@ -150,7 +157,7 @@ input:checked + .slider + .sliderTxt {
     align-items: center;
     justify-content: left;
     margin-left: 2vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 
 .benefit img {
