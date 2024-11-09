@@ -1,8 +1,94 @@
 .Header {
-    font-size: var(--size-5xl);
+    font-size: 5vw;
     text-align: center;
 }
 
+/*-------------------SLIDER*/
+.sliderBox {
+    display: flex;
+    justify-content: center;
+    margin: 2vw;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30vw;
+    height: 5vw;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e4e4e4;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 3vw;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 5vw;
+    width: 15vw;
+    background-color: #ecbe74;
+    transition: .4s;
+    border-radius: 3vw;
+}
+
+  /*Change the color of the box
+  /* input:checked + .slider {
+    background-color: #2196F3;
+  } */
+  
+  /*Add shadow to the box
+  /* input:focus + .slider {
+    box-shadow: 0 0 3px #555555;
+  } */
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(15vw);
+    -ms-transform: translateX(15vw);
+    transform: translateX(15vw);
+}
+
+.sliderTxt {
+    position: absolute;
+    z-index: 1000;
+    color: white;
+    top: 1.5vw;
+    left: 4vw;
+    font-size: 2vw;
+}
+
+.sliderTxtAfter {
+    position: absolute;
+    z-index: 1000;
+    top: 1.5vw;
+    left: 20vw;
+    font-size: 2vw;
+    color: gray;
+}
+
+input:checked + .slider + .sliderTxt + .sliderTxtAfter {
+    color: white;
+}
+
+input:checked + .slider + .sliderTxt {
+    color: gray;
+}
+
+/*-----------------PLANS*/
 .plansGroup{
     display: flex;
     flex-direction: row;
@@ -31,9 +117,10 @@
     border-radius: 10px;
     width: 50%;
     padding: 5px;
+    margin-top: 2vw;
     text-align: center;
     color: #da9958 ;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .plan:hover{
@@ -54,6 +141,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
 }
 
 .benefit {
@@ -62,6 +150,7 @@
     align-items: center;
     justify-content: left;
     margin-left: 2vw;
+    margin-top: 2vw;
 }
 
 .benefit img {
