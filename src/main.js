@@ -92,7 +92,11 @@ document.querySelectorAll("a").forEach((link) => {
         const targetUrl = link.getAttribute("href");
 
         // Check if the link is the one that should go to a new page
-        if (targetUrl === "about.html") { // Replace with the specific URL or ID
+        if (targetUrl === "about.html"){ // Replace with the specific URL or ID
+            // Navigate directly to the new page
+            event.preventDefault();
+            window.location.href = targetUrl;
+        } else if (targetUrl === "price.html"){
             // Navigate directly to the new page
             event.preventDefault();
             window.location.href = targetUrl;
