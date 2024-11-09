@@ -100,7 +100,11 @@ document.querySelectorAll("a").forEach((link) => {
             // Navigate directly to the new page
             event.preventDefault();
             window.location.href = targetUrl;
-        } else {
+        }else if (targetUrl === "index.html") {
+            // Navigate directly to the new page
+            event.preventDefault();
+            window.location.href = targetUrl;
+        }else {
             // Use scrollIntoView for all other links
             event.preventDefault();
             const targetId = targetUrl.substring(1); // Get the ID from href
