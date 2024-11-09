@@ -5,15 +5,16 @@
     <title>Unifi</title>
     <link rel="stylesheet" href="styles/modern-normalize.css">
     <link rel="stylesheet" href="styles/components/price.css">
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components/footer.css">
     <link rel="stylesheet" href="styles/components/header.css">
 
     <link rel="stylesheet" href="styles/utils.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap">
+    
+    <script type="module" src="src/main.js"></script>
 </head>
 
 <body>
@@ -27,12 +28,21 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About the Team</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
     
-    <h1 class="Header">What Will It <span style="color: #da9958;">Cost?</span></h1>
+    <h1 class="Header">What Will It <span>Cost?</span></h1>
+
+    <div class="sliderBox">
+        <label class="switch">
+            <input id = "checkbox" type="checkbox">
+            <p class="slider"></p>
+            <p class="sliderTxt">Monthly</p>
+            <p class="sliderTxtAfter">Yearly</p>
+        </label>
+    </div>
+
     <div class="plansGroup">
         <div class="plan">
             <h2>Free</h2>
@@ -59,7 +69,7 @@
         </div>
         <div class="plan">
             <h2>Individual</h2>
-            <h1>$9.99</h1>
+            <h1 id = "individual">$2.99</h1>
             <div class="benefits">
                 <div class="benefit">
                     <img src="assets/checkMark.png" alt="checkmark">
@@ -81,7 +91,7 @@
         </div>
         <div class="plan">
             <h2>Buisness</h2>
-            <h1>$49.99</h1>
+            <h1 id="buisness">$7.99</h1>
             <div class="benefits">
                 <div class="benefit">
                     <img src="assets/checkMark.png" alt="checkmark">

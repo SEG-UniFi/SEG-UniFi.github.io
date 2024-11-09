@@ -130,3 +130,19 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+// price page slider
+const slider = document.getElementById('checkbox');
+const individualH1 = document.getElementById('individual');
+const buisnessH1 = document.getElementById('buisness');
+
+checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+        individualH1.textContent = '$29.99'
+        buisnessH1.textContent = '$63.99'
+    } else {
+        individualH1.textContent = '$2.99'
+        buisnessH1.textContent = '$7.99'
+    }
+})
+
