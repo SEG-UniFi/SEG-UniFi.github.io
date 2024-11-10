@@ -47,6 +47,7 @@ html,body {
     top: 20vw;
     font-size: 4vw;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
 }
 
 .teamCard hr{
@@ -64,6 +65,7 @@ html,body {
     top: 25vw;
     font-size: 2vw;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
 }
 
 .hidden1 {

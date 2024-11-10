@@ -104,6 +104,14 @@ document.querySelectorAll("a").forEach((link) => {
             // Navigate directly to the new page
             event.preventDefault();
             window.location.href = targetUrl;
+        } else if (targetUrl === "price.html") {
+            // Navigate directly to the new page
+            event.preventDefault();
+            window.location.href = targetUrl;
+        } else if (targetUrl === "index.html#learn-more") {
+            // Navigate directly to the new page
+            event.preventDefault();
+            window.location.href = targetUrl;
         }else {
             // Use scrollIntoView for all other links
             event.preventDefault();
@@ -132,17 +140,4 @@ window.addEventListener('scroll', () => {
 });
 
 // price page slider
-const slider = document.getElementById('checkbox');
-const individualH1 = document.getElementById('individual');
-const buisnessH1 = document.getElementById('buisness');
-
-checkbox.addEventListener('change', function() {
-    if (checkbox.checked) {
-        individualH1.textContent = '$29.99'
-        buisnessH1.textContent = '$63.99'
-    } else {
-        individualH1.textContent = '$2.99'
-        buisnessH1.textContent = '$7.99'
-    }
-})
 

@@ -8,113 +8,150 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/components/footer.css">
     <link rel="stylesheet" href="styles/components/header.css">
-
     <link rel="stylesheet" href="styles/utils.css">
+    <link rel="stylesheet" href="styles/components/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap">
-    
-    <script type="module" src="src/main.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Questrial&display=swap">
+    <script src="https://kit.fontawesome.com/f6b7ebe716.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="header">
-            <nav id="navbar" class="">
-            <div id="header__logo" >
-                Uni<span>Fi</span>
-            </div>
-                 <ul class="header__menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About the Team</a></li>
+            <nav id="navbar">
+                <div id="header__logo">Uni<span>Fi</span></div>
+                <ul class="header__menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the Team</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-    <h1 class="Header">What Will It <span>Cost?</span></h1>
 
-    <div class="sliderBox">
-        <label class="switch">
-            <input id = "checkbox" type="checkbox">
-            <p class="slider"></p>
-            <p class="sliderTxt">Monthly</p>
-            <p class="sliderTxtAfter">Yearly</p>
-        </label>
-    </div>
+    <section class="section container">
+        <h1 class="Header">What Will It <span>Cost?</span></h1>
 
-    <div class="plansGroup">
-        <div class="plan">
-            <h2>Trial</h2>
-            <h1>$0</h1>
-            <p class="planDescription">If your just looking to set up a one time event, or if you just want to see what UniFi is all about. Limited to <span>5 events per month</span>.</p>
-            <hr>
-            <div class="benefits">
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Remove Adds</p>
+        <div class="sliderBox">
+            <label class="switch">
+                <input id="billingToggle" type="checkbox" onchange="toggleBilling()">
+                <p class="slider"></p>
+                <p class="sliderTxt">Monthly</p>
+                <p class="sliderTxtAfter">Yearly</p>
+            </label>
+        </div>
+        <section class="section container">
+            <p class="explanation">At Unifi, we care about students and understand that it’s tough out here. That’s why all <span>
+                students can access our
+                platform for free
+            </span>—our goal is to help you connect, discover, and thrive on campus and beyond. For business owners or
+            event planners looking to reach a broader audience, we offer flexible upgrade options with enhanced tools to promote
+            events and grow your community. We’re here to support you, wherever you are in your journey!</p>
+        </section>
+        <div class="plansGroup">
+            <div class="plan trial">
+                <h2>Trial</h2>
+                <h1>$0</h1>
+                <p class="planDescription">If you're just looking to set up a one-time event, or want to see what UniFi
+                    is all about. Limited to <span>5 events per month</span>.</p>
+                <button class="fill-btn"  onclick="window.location.href='index.html#learn-more'">
+                    <i class=" btn-arrow fa-solid fa-arrow-right"></i>
+                    Start Your 7 Day Free Trial
+                </button>
+                <div class="benefits">
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Remove Ads</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Unlimited Events</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Post Event Analytics</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Event Promotions</p>
+                    </div>
                 </div>
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Unlimited Events</p>
+            </div>
+
+            <div class="plan individual">
+                <h2>Individual</h2>
+                <h1 id="individual-price" data-monthly="2.99" data-yearly="29.99">$2.99</h1>
+                
+                <p class="planDescription">For those who plan to host <span>many events per month</span> with the
+                    <span>best possible app performance</span>.</p>
+                    <button class="fill-btn" onclick="window.location.href='index.html#learn-more'">
+                    <i class=" btn-arrow fa-solid fa-arrow-right"></i>
+                    Start Your 7 Day Free Trial
+                </button>
+                <div class="benefits">
+                    <div class="benefit"><i class="fa-solid fa-check"></i>
+                        <p>Remove Ads</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-check"></i>
+                        <p>Unlimited Events</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Post Event Analytics</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-x"></i>
+                        <p class="crossedOut">Event Promotions</p>
+                    </div>
                 </div>
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Post Event Analytics</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Event Promotions</p>
+            </div>
+
+            <div class="plan business">
+                <h2>Business</h2>
+                <h1 id="business-price" data-monthly="7.99" data-yearly="69.99">$7.99</h1>
+                <p class="planDescription">For larger businesses looking for <span>organized analytical data</span> on
+                    their events. Events will also be <span>promoted to more users</span>.</p>
+                    <button class="fill-btn"  onclick="window.location.href='index.html#learn-more'">
+                        <i class=" btn-arrow fa-solid fa-arrow-right"></i>
+                        Start Your 7 Day Free Trial
+                    </button>
+                <div class="benefits">
+                    <div class="benefit"><i class="fa-solid fa-check"></i>
+                        <p>Remove Ads</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-check"></i>
+                        <p>Unlimited Events</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-check"></i>
+                        <p>Post Event Analytics</p>
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-check fa-beat"></i>
+                        <p>Event Promotions</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="plan">
-            <h2>Individual</h2>
-            <h1 id = "individual">$2.99</h1>
-            <p class="planDescription">For those who plan to host <span>many events per month</span> with the <span>best possible app performance</span>.</p>
-            <div class="benefits">
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Remove Adds</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Unlimited Events</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Post Event Analytics</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/xMark.png" alt="checkmark">
-                    <p class="crossedOut">Event Promotions</p>
-                </div>
-            </div>
-        </div>
-        <div class="plan">
-            <h2>Buisness</h2>
-            <h1 id="buisness">$7.99</h1>
-            <p class="planDescription">For larger buisnesses who are looking for <span>organized analytical data</span> on their events. Events will also be <span>promoted to more users</span>.</p>
-            <div class="benefits">
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Remove Adds</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Unlimited Events</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Post Event Analytics</p>
-                </div>
-                <div class="benefit">
-                    <img src="assets/checkMark.png" alt="checkmark">
-                    <p>Event Promotions</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
+<!-- js for the page -->
+    <script>
+        // price toggle
+        function toggleBilling() {
+            const isYearly = document.getElementById("billingToggle").checked;
+            const individualPrice = document.getElementById("individual-price");
+            const businessPrice = document.getElementById("business-price");
+
+            // Set prices based on the toggle state
+            individualPrice.textContent = isYearly ? `$${individualPrice.dataset.yearly}` : `$${individualPrice.dataset.monthly}`;
+            businessPrice.textContent = isYearly ? `$${businessPrice.dataset.yearly}` : `$${businessPrice.dataset.monthly}`;
+        }
+
+        // js for the nav , we dont want all the js styles on this page
+        window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('navbar');
+
+                if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+    </script>
 </body>
 
 <footer>

@@ -23,6 +23,7 @@ nav{
 
 .scrolled {
     background-color: var(--col-orange);
+    z-index: 9999;
     /* Background color when scrolled */
 }
 

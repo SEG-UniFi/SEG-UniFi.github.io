@@ -2,7 +2,18 @@
     font-size: 5vw;
     text-align: center;
 }
+body{
+    background-color: #f4f5f9;
+}
 
+/* icons */
+.fa-solid{
+    margin-right: 10px;
+    color: var(--col-orange);
+}
+.btn-arrow{
+    color: var(--col-white);
+}
 /*-------------------SLIDER*/
 .sliderBox {
     display: flex;
@@ -34,14 +45,17 @@
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 3vw;
+    z-index: 1;
   }
-  
+  .sliderTxt, .sliderTxtAfter{
+    cursor: pointer;
+  }
 .slider:before {
     position: absolute;
     content: "";
     height: 5vw;
     width: 15vw;
-    background-color: #ecbe74;
+    background-color: var(--col-orange);
     transition: .4s;
     border-radius: 3vw;
 }
@@ -61,7 +75,11 @@ input:checked + .slider:before {
     -ms-transform: translateX(15vw);
     transform: translateX(15vw);
 }
-
+.explanation{
+    text-align: center;
+    margin: 5% 6%;
+    font-size: var(--size-lg);
+}
 .sliderTxt {
     position: absolute;
     z-index: 1000;
@@ -93,34 +111,44 @@ input:checked + .slider + .sliderTxt {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 5%;
 }
 
 .plan {
-    border: 5px solid #ecbe74;
     border-radius: 15px;
-    width: 20vw;
+    width: 33%;
     margin: 1vw;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 
+}
+.individual {
+    background-color: #da995840;
+}
+.trial{
+    border: 1px solid var(--col-light);
+}
+.business{
+    border: 1px solid var(--col-light)
+}
 .plan h1 {
     color: #da9958 ;
-    font-size: 2vw;
+    font-size: var(--size-4xl);
+    font-weight: 300;
     margin: 1vw;
 }
 
 .plan h2{
-    border: 3px solid #ecbe74;
-    border-radius: 10px;
     width: 50%;
     padding: 5px;
     margin-top: 2vw;
     text-align: center;
     color: #da9958 ;
-    font-size: 1.5vw;
+    font-size: var(--size-4xl);
 }
 
 .planDescription {
@@ -132,11 +160,11 @@ input:checked + .slider + .sliderTxt {
 }
 
 .plan:hover{
-    background: #ecbe74;
-    width: 22vw;
+    background: #976026d2;
     height: auto;
-    margin-inline: 0;
-    margin-top: 0;
+    cursor: pointer;
+    transform: scale(1.1);
+     /* Grows card */
 }
 
 .plan:hover .crossedOut, .plan:hover p, .plan:hover h2, .plan:hover h1{
@@ -167,13 +195,13 @@ input:checked + .slider + .sliderTxt {
 }
 
 .benefit p {
-    font-size: 1.5vw;
-    color: #da9958;
+    font-size: var(--size-lg);
+    color: var(--col-black);
 }
 
 .crossedOut {
     text-decoration: line-through; 
-    text-decoration-color: #da9958 ;
+    text-decoration-color: var(--col-black) ;
     text-decoration-thickness: 0.2vw;
 }
 
