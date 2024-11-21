@@ -14,6 +14,9 @@
       // Apply dynamic gradient
      document.body.style.background = `linear-gradient(to bottom, rgb(${currentColor.join(',')}), #e9e4e4)`;}
  )
+
+
+
 // index page counter animation
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counter');
@@ -129,15 +132,57 @@ document.querySelectorAll("a").forEach((link) => {
 
 
 // navbar
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        const span = document.getElementById('current-page'); // Selects the span inside the navbar
 
-    if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+            if (span) {
+                span.classList.add('scroll-span');
+            }
+        } else {
+            navbar.classList.remove('scrolled');
+            if (span) {
+                span.classList.remove('scroll-span');
+            }
+        }
+    });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Scroll event to add the scrolled class to hamburger
+    window.addEventListener('scroll', () => {
+        const hamburger = document.querySelector('.hamburger');
+
+        // If scrolled more than 50px, add the scrolled class
+        if (window.scrollY > 50) {
+            hamburger.classList.add('scrolled');
+        } else {
+            hamburger.classList.remove('scrolled');
+        }
+    });
+
+    // Hamburger menu toggle (existing code)
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("header__menu");
+    const body = document.body;
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("open");
+
+        // Disable navbar transitions when menu is open
+        if (menu.classList.contains("active")) {
+            body.classList.add("menu-open"); // Add a class to body when menu is open
+        } else {
+            body.classList.remove("menu-open"); // Remove the class when menu is closed
+        }
+    });
+});
+
 
 // price page slider
 

@@ -1,41 +1,85 @@
-.features h1{
+.features h1 {
     text-align: center;
-    font-size: var(--size-5xl);
+    font-size: clamp(var(--size-3xl), 5vw, var(--size-5xl));
 }
-.features__image{
+
+.features__image {
     width: 100%;
+    margin: 0 auto;
 }
-.features__image img{
+
+.features__image img {
     width: 100%;
-}
-.features-list div{
-    border-radius: 20px;
-    box-shadow: 14px 15px 20px 0px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-    width: 30%;
-    padding: 30px 15px;
-    background-color: var(--col-white);
-    
-    
+    height: auto;
 }
 
 .features-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Makes items wrap on smaller screens */
+    gap: 1.5rem;
+    /* Adds space between items */
+    justify-content: center;
+    /* Center aligns on small screens */
 }
 
-.features-list h2{
-    text-align: center;
+.features-list div {
+    border-radius: 20px;
+    box-shadow: 14px 15px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    width: clamp(90%, 30%, 30%);
+    /* Shrinks on smaller screens */
+    padding: 30px 15px;
+    background-color: var(--col-white);
 }
+
+.features-list h2 {
+    text-align: center;
+    font-size: clamp(var(--size-xl), 4vw, var(--size-2xl));
+}
+
 .features-list h3 {
-    font-size: var(--size-8xl);
-    color:var(--col-orange);
+    font-size: clamp(var(--size-4xl), 6vw, var(--size-8xl));
+    color: var(--col-orange);
     text-align: center;
 }
 
-.features__intro p{
+.features__intro p {
     text-align: center;
-    margin-top: 5%;
-    margin-bottom:5%;
-    font-size: var(--size-xl);
+    margin: 5% 0;
+    font-size: clamp(var(--size-base), 3vw, var(--size-xl));
+}
+
+
+
+/* XS */
+@media (min-width: 475px) {
+    .features-list div {
+        width: 90%;
+        /* Full width for narrow screens */
+    }
+}
+
+/* SM */
+@media (min-width: 640px) {
+    .features-list div {
+        width: 45%;
+        /* Two items per row */
+    }
+}
+
+/* MD */
+@media (min-width: 768px) {
+    .features-list div {
+        width: 30%;
+        /* Three items per row */
+    }
+}
+
+/* LG */
+@media (min-width: 1024px) {
+    .features__intro p {
+        font-size: var(--size-xl);
+        /* Larger text for bigger screens */
+    }
 }

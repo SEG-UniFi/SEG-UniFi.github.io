@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unifi</title>
     <link rel="stylesheet" href="styles/modern-normalize.css">
     <link rel="stylesheet" href="styles/components/price.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/components/header.css">
     <link rel="stylesheet" href="styles/components/footer.css">
-    <link rel="stylesheet" href="styles/components/header.css">
+    
+
     <link rel="stylesheet" href="styles/utils.css">
-    <link rel="stylesheet" href="styles/components/header.css">
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -20,11 +23,26 @@
 <body>
     <header>
         <div class="header">
-            <nav id="navbar">
+            <nav id="navbar" class="">
                 <div id="header__logo">Uni<span>Fi</span></div>
-                <ul class="header__menu">
+                <!-- Hamburger Icon -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                                <!-- Navigation Menu -->
+
+                <ul class="header__menu" id="header__menu">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#overview">Features</a></li>
+                    <li>
+                        <a href="price.html">
+                            <span id="current-page">Pricing</span>
+                        </a>
+                    </li>
                     <li><a href="about.html">About the Team</a></li>
+                    <li><a href="index.html#learn-more">Mailing List</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,12 +60,15 @@
             </label>
         </div>
         <section class="section container">
-            <p class="explanation">At Unifi, we care about students and understand that it’s tough out here. That’s why all <span>
-                students can access our
-                platform for free
-            </span>—our goal is to help you connect, discover, and thrive on campus and beyond. For business owners or
-            event planners looking to reach a broader audience, we offer flexible upgrade options with enhanced tools to promote
-            events and grow your community. We’re here to support you, wherever you are in your journey!</p>
+            <p class="explanation">At Unifi, we care about students and understand that it’s tough out here. That’s why
+                all <span>
+                    students can access our
+                    platform for free
+                </span>—our goal is to help you connect, discover, and thrive on campus and beyond. For business owners
+                or
+                event planners looking to reach a broader audience, we offer flexible upgrade options with enhanced
+                tools to promote
+                events and grow your community. We’re here to support you, wherever you are in your journey!</p>
         </section>
         <div class="plansGroup">
             <div class="plan trial">
@@ -55,7 +76,7 @@
                 <h1>$0</h1>
                 <p class="planDescription">If you're just looking to set up a one-time event, or want to see what UniFi
                     is all about. Limited to <span>5 events per month</span>.</p>
-                <button class="fill-btn"  onclick="window.location.href='index.html#learn-more'">
+                <button class="fill-btn" onclick="window.location.href='index.html#learn-more'">
                     <i class=" btn-arrow fa-solid fa-arrow-right"></i>
                     Start Your 7 Day Free Trial
                 </button>
@@ -78,10 +99,11 @@
             <div class="plan individual">
                 <h2>Individual</h2>
                 <h1 id="individual-price" data-monthly="2.99" data-yearly="29.99">$2.99</h1>
-                
+
                 <p class="planDescription">For those who plan to host <span>many events per month</span> with the
-                    <span>best possible app performance</span>.</p>
-                    <button class="fill-btn" onclick="window.location.href='index.html#learn-more'">
+                    <span>best possible app performance</span>.
+                </p>
+                <button class="fill-btn" onclick="window.location.href='index.html#learn-more'">
                     <i class=" btn-arrow fa-solid fa-arrow-right"></i>
                     Start Your 7 Day Free Trial
                 </button>
@@ -106,10 +128,10 @@
                 <h1 id="business-price" data-monthly="7.99" data-yearly="69.99">$7.99</h1>
                 <p class="planDescription">For larger businesses looking for <span>organized analytical data</span> on
                     their events. Events will also be <span>promoted to more users</span>.</p>
-                    <button class="fill-btn"  onclick="window.location.href='index.html#learn-more'">
-                        <i class=" btn-arrow fa-solid fa-arrow-right"></i>
-                        Start Your 7 Day Free Trial
-                    </button>
+                <button class="fill-btn" onclick="window.location.href='index.html#learn-more'">
+                    <i class=" btn-arrow fa-solid fa-arrow-right"></i>
+                    Start Your 7 Day Free Trial
+                </button>
                 <div class="benefits">
                     <div class="benefit"><i class="fa-solid fa-check"></i>
                         <p>Remove Ads</p>
@@ -127,30 +149,69 @@
             </div>
         </div>
     </section>
-<!-- js for the page -->
+    <!-- js for the page -->
     <script>
-        // price toggle
-        function toggleBilling() {
-            const isYearly = document.getElementById("billingToggle").checked;
-            const individualPrice = document.getElementById("individual-price");
-            const businessPrice = document.getElementById("business-price");
+    // Toggle billing plan
+function toggleBilling() {
+    const isYearly = document.getElementById("billingToggle").checked;
+    const individualPrice = document.getElementById("individual-price");
+    const businessPrice = document.getElementById("business-price");
 
-            // Set prices based on the toggle state
-            individualPrice.textContent = isYearly ? `$${individualPrice.dataset.yearly}` : `$${individualPrice.dataset.monthly}`;
-            businessPrice.textContent = isYearly ? `$${businessPrice.dataset.yearly}` : `$${businessPrice.dataset.monthly}`;
-        }
-
-        // js for the nav , we dont want all the js styles on this page
+    // Set prices based on the toggle state
+    individualPrice.textContent = isYearly ? `$${individualPrice.dataset.yearly}` : `$${individualPrice.dataset.monthly}`;
+    businessPrice.textContent = isYearly ? `$${businessPrice.dataset.yearly}` : `$${businessPrice.dataset.monthly}`;
+}
+    // navbar
+    document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
-                const navbar = document.getElementById('navbar');
+            const navbar = document.getElementById('navbar');
+            const span = document.getElementById('current-page'); // Selects the span inside the navbar
 
-                if (window.scrollY > 50) { // Adjust the scroll threshold as needed
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                if (span) {
+                    span.classList.add('scroll-span');
                 }
-            });
+            } else {
+                navbar.classList.remove('scrolled');
+                if (span) {
+                    span.classList.remove('scroll-span');
+                }
+            }
+        });
+    });
 
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Scroll event to add the scrolled class to hamburger
+        window.addEventListener('scroll', () => {
+            const hamburger = document.querySelector('.hamburger');
+
+            // If scrolled more than 50px, add the scrolled class
+            if (window.scrollY > 50) {
+                hamburger.classList.add('scrolled');
+            } else {
+                hamburger.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger menu toggle (existing code)
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("header__menu");
+        const body = document.body;
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("active");
+            hamburger.classList.toggle("open");
+
+            // Disable navbar transitions when menu is open
+            if (menu.classList.contains("active")) {
+                body.classList.add("menu-open"); // Add a class to body when menu is open
+            } else {
+                body.classList.remove("menu-open"); // Remove the class when menu is closed
+            }
+        });
+    })
     </script>
 </body>
 

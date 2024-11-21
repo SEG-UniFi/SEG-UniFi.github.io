@@ -3,3 +3,33 @@ footer{
     margin-bottom: 0.5%;
     text-align: center;
 }
+
+.learn-more {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-more__image img {
+    width: 100%;
+}
+
+.signup {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    /* For medium screens like tablets */
+    .learn-more {
+        flex-direction: column;
+    }
+
+   .learn-more__image {
+       display: none;
+       /* Hide the image */
+   }
+}
+

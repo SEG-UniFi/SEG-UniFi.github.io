@@ -1,88 +1,177 @@
-.overview{
+/* General Styles */
+.overview {
     padding-top: 2%;
     display: flex;
+    flex-direction: column;
+    /* Default to column for small screens */
 }
-.overview div{
+
+.overview div {
     width: 100%;
 }
-.overview__feature1, .overview__feature2{
-        display: flex;
-        justify-content: center;
-        /* Horizontal center */
-        align-items: center;
-        /* Vertical center */
-        height: 100vh;
-        /* Full viewport height */
-    
+
+.overview__feature1,
+.overview__feature2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* Adjust height for smaller screens */
+    padding: 5% 2%;
+    /* Padding for better spacing on mobile */
+    text-align: center;
 }
+
 .overview__feature1 h2,
-.overview__feature2 h2{
-    font-size: var(--size-3xl);
+.overview__feature2 h2 {
+    font-size: 2rem;
+    /* Base size for small screens */
 }
-.overview__feature1 p, .overview__feature2 p{
+
+.overview__feature1 p,
+.overview__feature2 p {
     margin-top: 2%;
-    font-size: var(--size-xl);
+    font-size: 1rem;
 }
+
 .overview__image {
-    width: 80%;
+    width: 100%;
+    margin-bottom: 2rem;
+    /* Spacing between sections */
 }
 
 .overview__image img {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
 }
-.overview__image__title{
-    font-size: var(--size-5xl);
+
+.overview__image__title {
+    font-size: 2.5rem;
     text-align: center;
 }
 
-
-.overview-two{
+/* Flexbox Sections */
+.overview-two,
+.overview-three {
     display: flex;
-}
-.overview-two__feature, .overview-three__feature{
-    display: flex;
-    justify-content: center;
-    /* Horizontal center */
+    flex-direction: column;
+    /* Default to column for smaller screens */
     align-items: center;
-    /* Vertical center */
-    height: 90vh;
-    /* Full viewport height */
-    width:70%;
 }
-.overview-two__feature div h2{
-    font-size: var(--size-6xl);
-}
-.overview-two__feature div p{
-    font-size: var(--size-xl);
-}
-.overview-two__image {
-    width: 40%;
-}
-.overview-two__image img {
-    margin: 0 auto;
+
+.overview-two__feature,
+.overview-three__feature {
     width: 100%;
+    padding: 5% 2%;
+    text-align: center;
+    /* Center-align text for mobile */
 }
 
-.overview-two {
-    display: flex;
-}
-
+.overview-two__feature div h2,
 .overview-three__feature div h2 {
-    text-align: end;
-    font-size: var(--size-5xl);
+    font-size: 2rem;
 }
 
+.overview-two__feature div p,
 .overview-three__feature div p {
-    text-align: end;
-    font-size: var(--size-xl);
+    font-size: 1rem;
 }
 
+.overview-two__image,
 .overview-three__image {
-    width: 40%;
+    width: 100%;
+    /* Full width on small screens */
+    margin-bottom: 2rem;
 }
 
+.overview-two__image img,
 .overview-three__image img {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
+}
+
+/* Image and Text Order for Mobile */
+.overview-two__image {
+    order: -1;
+    /* Image before text */
+}
+
+.overview-two__feature {
+    order: 0;
+    /* Text after image */
+}
+
+/* Larger Screens */
+@media (min-width: 768px) {
+    .overview {
+        flex-direction: row;
+        /* Row layout for larger screens */
+    }
+
+    .overview__feature1,
+    .overview__feature2 {
+        height: 80vh;
+        /* Full viewport height */
+        padding: 0;
+        text-align: left;
+        /* Align text to the left */
+    }
+
+    .overview__feature1 h2,
+    .overview__feature2 h2 {
+        font-size: var(--size-2xl);
+    }
+
+    .overview__feature1 p,
+    .overview__feature2 p {
+        font-size: var(--size-md);
+    }
+
+    .overview__image {
+        width: 80%;
+        /* Adjust image width */
+    }
+
+    .overview-two,
+    .overview-three {
+        flex-direction: row;
+        /* Row layout for larger screens */
+    }
+
+    .overview-two__feature,
+    .overview-three__feature {
+        width: 70%;
+        /* Adjust width for features */
+        text-align: left;
+    }
+
+    .overview-two__image,
+    .overview-three__image {
+        width: 40%;
+        /* Adjust image width */
+        margin: 0;
+        order: 1;
+        /* Image after text */
+    }
+
+    .overview-two__feature {
+        order: 2;
+        /* Text before image */
+    }
+
+    .overview-two__feature div h2,
+    .overview-three__feature div h2 {
+        font-size: var(--size-6xl);
+    }
+
+    .overview-two__feature div p,
+    .overview-three__feature div p {
+        font-size: var(--size-xl);
+    }
+}
+
+@media (min-width: 1024px){
+    .overview__feature1, .overview__feature2{
+        height: 100vh;
+    }
 }

@@ -13,6 +13,8 @@ nav{
     z-index: 1;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-right: 50px !important;
+    padding-left: 50px !important;
     font-size: var(--size-xl);
     width: 100%;
     padding-left: 110px;
@@ -42,8 +44,7 @@ nav{
 .header__menu{
     display: flex;
     align-items:center;
-    justify-content: flex-end;
-    /* Align nav items to the right */
+    justify-content: center;
     list-style: none;
     gap:2em;
 }
@@ -63,4 +64,129 @@ nav{
 #header__logo{
     flex: 0 0 auto;
     font-size: var(--size-3xl);
+}
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 999;
+    /* it's above other elements */
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--col-black);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+/* Base styles remain unchanged */
+
+/* Navigation Styles for Small Screens */
+@media (max-width: 768px) {
+    .scrolled {
+            background-color:transparent;
+                  }
+    
+        
+    .header__menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 220px;
+        /* Adjust width as needed */
+        background-color: var(--col-orange);
+        padding-top: 1rem;
+        transform: translateX(100%);
+        /* Hidden offscreen by default */
+        transition: transform 0.3s ease;
+        z-index: 100;
+        display: flex;
+    }
+
+    .header__menu.active {
+        transform: translateX(0);
+        /* Slide in */
+        padding-left: 0;
+    }
+
+    .header__menu li {
+        margin: 1rem 0;
+    }
+
+    .header__menu li a {
+        font-size: var(--size-lg);
+        color: var(--col-white);
+        text-align: center;
+    }
+
+    .hamburger {
+        position: fixed;
+        display: flex;
+        right: 6%;
+        z-index:999 ;
+        
+        /* Show hamburger on small screens */
+    }
+    .hamburger span {
+        background-color: var(--col-black);
+    }
+
+    #header__logo {
+        flex: 1;
+    }
+
+    nav {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+/* Hamburger Menu Background and Padding when Scrolled */
+.hamburger.scrolled {
+    background-color: var(--col-orange);
+    /* Set background color to orange when scrolled */
+    width: 35px;
+    height: 30px;
+    padding: 5px;
+    /* Add some padding around the hamburger icon */
+    border-radius: 5px;
+    /* Optional: round the corners of the background */
+}
+
+/* Make sure the hamburger's bars stay visible and centered */
+.hamburger span {
+    background-color: var(--col-black);
+    transition: all 0.3s ease;
+}
+
+/* When the page is scrolled, the bars' color remains black against the orange background */
+.hamburger.scrolled span {
+    background-color: var(--col-white);
+    /* White bars when scrolled */
 }

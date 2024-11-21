@@ -34,83 +34,60 @@
 
 /* MEDIA QUERIES */
 
-
-
-/* xs */
-@media(min-width: 475px){
-    .container{
-        max-width: 475px;
-    }
-}
-
-/* sm */
-@media(min-width: 640px) {
+/* XS */
+@media (min-width: 475px) {
     .container {
-            max-width: 640px;
-        }
-}
-
-/* md */
-@media(min-width: 768px) {
-     .container{
-        max-width: 768px;
+        padding: 1rem 2rem;
     }
 }
 
-/* lg */
-@media(min-width: 1024px) {
-     .container{
-        max-width: 1024px;
-    }
-    .section {
-        margin-top: 2rem;
+/* SM */
+@media (min-width: 640px) {
 
+    button {
+        font-size: var(--size-base);
     }
-}
-
-/* xl */
-@media(min-width: 1280px) {
-     .container{
-        max-width: 1280px;
+    .container {
+        padding: 2rem 3rem;
     }
 }
 
-/* 2xl */
-@media(min-width: 1536px) {
-     .container{
-        max-width: 1536px;
+/* MD */
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--size-5xl);
+    }
+
+    .container {
+        padding: 2rem 3rem;
     }
 }
 
-
-
-/* clean media queries to add on other pages*/
-/* xs */
-/* @media(min-width: 475px) {
-    
-} */
-
-/* sm */
-/* @media(min-width: 640px) {
-    
-} */
-
-/* md */
-/* @media(min-width: 768px) {
-    
-} */
-
-/* lg */
-/* @media(min-width: 1024px) {
-    
-} */
-
-/* xl */
-/* @media(min-width: 1280px) {
-    
-} */
-
-/* 2xl */
-/* @media(min-width: 1536px) {
+/* LG */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--size-6xl);
+    }
    
-} */
+}
+
+/* XL */
+@media (min-width: 1280px) {
+   
+    button {
+        font-size: var(--size-lg);
+    }
+
+}
+
+/* 2XL */
+@media (min-width: 1536px) {
+    h1 {
+        font-size: var(--size-7xl);
+    }
+
+    .container {
+        padding: 3rem 4rem;
+    }
+
+}

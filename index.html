@@ -25,34 +25,43 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="header">
             <nav id="navbar" class="">
-            <div id="header__logo" >
-                Uni<span>Fi</span>
-            </div>
-                 <ul class="header__menu">
-                        <li><a href="#overview">Features</a></li>
-                        <li><a href="price.html">Pricing</a></li>
-                        <li><a href="about.html">About the Team</a></li>
-                        <li><a href="#learn-more">Mailing List</a></li>
+                <div id="header__logo">
+                    Uni<span>Fi</span>
+                </div>
+                <!-- Hamburger Icon -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- Navigation Menu -->
+                <ul class="header__menu" id="header__menu">
+                    <li><a href="#overview">Features</a></li>
+                    <li><a href="price.html">Pricing</a></li>
+                    <li><a href="about.html">About the Team</a></li>
+                    <li><a href="#learn-more">Mailing List</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
 
+
     <main>
         <section id="landing" class="landing container section ">
-            <div> 
+            <div class="text"> 
                 <h1 class="landing__text"><span>Find</span> Your People,  Discover Your <span>City</span>.</h1>
-                <p>UniFi helps students and newcomers connect, explore, and build meaningful friendships while discovering everything your
-                city and campus have to offer.</p>
-                <br>
-                <p>Explore your campus, connect with like-minded people, and dive into your city’s hidden gems – all with the help of
-                UniFi.</p>
-                <button class="fill-btn" src="#learn-more"> Join the mailing list </button>
-                <button class="stroke-btn" src="about.html"> About the team</button>
+                <section >
+                    <p>UniFi helps students and newcomers connect, explore, and build meaningful friendships while discovering everything your
+                    city and campus have to offer.</p>
+                    <br>
+                    <p>Explore your campus, connect with like-minded people, and dive into your city’s hidden gems – all with the help of
+                    UniFi.</p>
+                </section>
+                <button class="fill-btn" onclick="location.href='#learn-more'"> Join the mailing list </button>
+                <button class="stroke-btn" onclick="location.href='about.html'"> About the team</button>
             </div>
             <div class="landing__image">
                 <img src="assets/home-image.png" alt="">

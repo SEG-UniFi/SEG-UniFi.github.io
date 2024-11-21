@@ -3,7 +3,7 @@
     margin-bottom: 5%;
 }
 .learn-more__image{
-    width: 130%;
+    width: 50%;
 }
 .learn-more__image img{
     width: 100%;
@@ -19,7 +19,6 @@
         flex-direction: column;
         justify-content: center;
         /* Horizontal center */
-        align-items: start;
         height: 70vh;
         /* Full viewport height */
 }

@@ -2,18 +2,21 @@
     font-size: 5vw;
     text-align: center;
 }
-body{
+
+body {
     background-color: #f4f5f9;
 }
 
 /* icons */
-.fa-solid{
+.fa-solid {
     margin-right: 10px;
     color: var(--col-orange);
 }
-.btn-arrow{
+
+.btn-arrow {
     color: var(--col-white);
 }
+
 /*-------------------SLIDER*/
 .sliderBox {
     display: flex;
@@ -45,11 +48,14 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 3vw;
-    z-index: 1;
-  }
-  .sliderTxt, .sliderTxtAfter{
+    z-index: 0;
+}
+
+.sliderTxt,
+.sliderTxtAfter {
     cursor: pointer;
-  }
+}
+
 .slider:before {
     position: absolute;
     content: "";
@@ -60,29 +66,31 @@ body{
     border-radius: 3vw;
 }
 
-  /*Change the color of the box
+/*Change the color of the box
   /* input:checked + .slider {
     background-color: #2196F3;
   } */
-  
-  /*Add shadow to the box
+
+/*Add shadow to the box
   /* input:focus + .slider {
     box-shadow: 0 0 3px #555555;
   } */
-  
-input:checked + .slider:before {
+
+input:checked+.slider:before {
     -webkit-transform: translateX(15vw);
     -ms-transform: translateX(15vw);
     transform: translateX(15vw);
 }
-.explanation{
+
+.explanation {
     text-align: center;
     margin: 5% 6%;
     font-size: var(--size-lg);
 }
+
 .sliderTxt {
     position: absolute;
-    z-index: 1000;
+    z-index: 0;
     color: white;
     top: 1.5vw;
     left: 4vw;
@@ -91,23 +99,23 @@ input:checked + .slider:before {
 
 .sliderTxtAfter {
     position: absolute;
-    z-index: 1000;
+    z-index: 0;
     top: 1.5vw;
     left: 20vw;
     font-size: 2vw;
     color: gray;
 }
 
-input:checked + .slider + .sliderTxt + .sliderTxtAfter {
+input:checked+.slider+.sliderTxt+.sliderTxtAfter {
     color: white;
 }
 
-input:checked + .slider + .sliderTxt {
+input:checked+.slider+.sliderTxt {
     color: gray;
 }
 
 /*-----------------PLANS*/
-.plansGroup{
+.plansGroup {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -118,7 +126,7 @@ input:checked + .slider + .sliderTxt {
     border-radius: 15px;
     width: 33%;
     margin: 1vw;
-    height: 65vh;
+    padding-bottom: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,50 +134,57 @@ input:checked + .slider + .sliderTxt {
     position: relative;
 
 }
+
 .individual {
     background-color: #da995840;
 }
-.trial{
+
+.trial {
     border: 1px solid var(--col-light);
 }
-.business{
+
+.business {
     border: 1px solid var(--col-light)
 }
+
 .plan h1 {
-    color: #da9958 ;
+    color: #da9958;
     font-size: var(--size-4xl);
     font-weight: 300;
     margin: 1vw;
 }
 
-.plan h2{
+.plan h2 {
     width: 50%;
     padding: 5px;
     margin-top: 2vw;
     text-align: center;
-    color: #da9958 ;
+    color: #da9958;
     font-size: var(--size-4xl);
 }
 
 .planDescription {
     margin-inline: 1vw;
-    font-size: 1vw;
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 0;
-    height: 6vw;
+    /* height: 6vw; */
 }
 
-.plan:hover{
+.plan:hover {
     background: #976026d2;
     height: auto;
     cursor: pointer;
     transform: scale(1.1);
-     /* Grows card */
+    /* Grows card */
 }
 
-.plan:hover .crossedOut, .plan:hover p, .plan:hover h2, .plan:hover h1{
+.plan:hover .crossedOut,
+.plan:hover p,
+.plan:hover h2,
+.plan:hover h1 {
     color: white;
-    text-decoration-color: white ;
+    text-decoration-color: white;
     border-color: white;
 }
 
@@ -177,6 +192,7 @@ input:checked + .slider + .sliderTxt {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 .benefit {
@@ -200,9 +216,175 @@ input:checked + .slider + .sliderTxt {
 }
 
 .crossedOut {
-    text-decoration: line-through; 
-    text-decoration-color: var(--col-black) ;
+    text-decoration: line-through;
+    text-decoration-color: var(--col-black);
     text-decoration-thickness: 0.2vw;
 }
 
 
+/* Plans Group (Pricing Cards) */
+.plansGroup {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+    justify-content: center;
+    margin: 0 5%;
+}
+
+/* Default: Horizontal layout for larger screens */
+.plan {
+    width: 30%;
+    /* Default width for large screens */
+    margin: 1vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, width 0.3s ease, font-size 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Explanation paragraph (inside each .plan) */
+p.explanation {
+    font-size: 1.2vw;
+    /* Default font size for larger screens */
+    text-align: center;
+    margin-top: 1em;
+    transition: font-size 0.3s ease;
+}
+
+/* Yearly/Monthly Button Styling */
+.toggleButton {
+    font-size: 1.5vw;
+    /* Default for large screens */
+    padding: 0.5vw 1vw;
+    /* Default button padding */
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.toggleButton:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.05);
+}
+
+/* Responsive Behavior: Medium Screens */
+@media (max-width: 1024px) {
+    div.benefit {
+        align-items: center;
+    }
+
+    button.fill-button {
+        order: 2;
+        margin-bottom: 3%;
+    }
+
+    .plansGroup {
+        flex-direction: column;
+        /* Stack plans vertically */
+    }
+
+    .plan {
+        width: 70%;
+        /* Wider plans for readability */
+        margin: 2vw auto;
+        padding: 3vw;
+        /* Increase padding for spacing */
+    }
+
+    p.explanation {
+        font-size: 2.5vw;
+        /* Larger text for medium screens */
+    }
+
+    .toggleButton {
+        font-size: 2.8vw;
+        /* Button grows accordingly */
+        padding: 1vw 2vw;
+    }
+}
+
+/* Small Screens: Fully Vertical Layout */
+@media (max-width: 768px) {
+    .plansGroup {
+        flex-direction: column;
+        /* Fully stacked layout */
+        align-items: center;
+    }
+
+    .plan {
+        width: 90%;
+        /* Almost full width */
+        margin: 2vw 0;
+        padding: 4vw;
+        /* Additional spacing for smaller screens */
+    }
+
+    p.explanation {
+        font-size: 4vw;
+        /* Even larger text for mobile screens */
+    }
+
+    .toggleButton {
+        font-size: 4vw;
+        /* Button text adjusts for readability */
+        padding: 1.5vw 3vw;
+    }
+
+}
+
+/* Header and Plan Titles */
+.Header {
+    font-size: 5vw;
+    /* Default font size */
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .Header {
+        font-size: 7vw;
+        /* Medium screens */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Header {
+        font-size: 8vw;
+        /* Small screens */
+    }
+}
+
+.plan h1,
+.plan h2 {
+    font-size: var(--size-4xl);
+    /* Default size for larger screens */
+}
+
+@media (max-width: 1024px) {
+
+    .plan h1,
+    .plan h2 {
+        font-size: 6vw;
+        /* Medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .plan h1,
+    .plan h2 {
+        font-size: 7vw;
+        /* Small screens */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .benefits {
+        align-items: start;
+    }
+}

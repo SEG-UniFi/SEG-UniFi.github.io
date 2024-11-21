@@ -1,29 +1,125 @@
-
-.landing{
+/* General Styles */
+.landing {
     display: flex;
     justify-content: space-between;
-}
-
-.landing__image{
-    width: 80%;
-    margin-left:10%;
-    margin-top: -5%;
-}
-.landing__image img{
-    width: 85%;
+    align-items: center;
+    /* Align text and image vertically */
+    flex-direction: column;
+    /* Default to column for smaller screens */
+    text-align: center;
+    /* Center-align text for smaller screens */
 }
 
 h1.landing__text {
     margin-top: 10%;
     margin-bottom: 5%;
-    width: 140%;
-    font-size: var(--size-7xl);
+    width: 100%;
+    font-size: 2.5rem;
+    /* Base font size for smaller screens */
 }
-.landing p{
-    font-size: var(--size-xl);
+
+.landing p {
+    font-size: 1rem;
+    /* Base paragraph size */
 }
-.landing button{
+div.text{
+    margin-bottom: 10%;
+}
+.landing button {
     margin-top: 5%;
-
 }
 
+.landing__image {
+    display: none;
+    /* Default: hidden */
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0%;
+}
+
+.landing__image img {
+    display: none;
+    /* Default: hidden */
+    width: 85%;
+}
+
+/* Responsive Styles */
+@media (min-width: 900px) {
+    .landing {
+        flex-direction: row;
+        /* Row layout for larger screens */
+        text-align: left;
+        /* Left-align text */
+    }
+
+    h1.landing__text {
+        font-size: 3rem;
+        /* Adjust font size for tablets */
+    }
+
+    .landing p {
+        font-size: 1.2rem;
+        /* Slightly larger text for readability */
+    }
+
+    .landing__image {
+        display: block;
+        /* Show image container */
+        width: 100%;
+        /* Adjust container width */
+    }
+
+    .landing__image img {
+        display: block;
+        /* Show image */
+        width: 100%;
+        /* Scale image within container */
+    }
+}
+
+@media (min-width: 1024px) {
+    h1.landing__text {
+        margin-top:5%;
+        font-size: 3.5rem;
+        /* Reduce text size for desktops */
+    }
+
+    .landing p {
+        font-size: 1.25rem;
+        /* Adjust paragraph size */
+    }
+
+    .landing__image {
+        width: 70%;
+        /* Increase container width */
+    }
+
+    .landing__image img {
+        width: 100%;
+        /* Scale image slightly larger */
+    }
+}
+
+@media (min-width: 1440px) {
+
+    h1.landing__text {
+        margin-top: 0%;
+        font-size: 4rem;
+        /* Slightly smaller text for ultra-wide screens */
+    }
+
+    .landing p {
+        font-size: 1.35rem;
+        /* Adjust paragraph size */
+    }
+
+    .landing__image {
+        width: 60%;
+        /* Increase image container width */
+    }
+
+    .landing__image img {
+        width: 100%;
+        /* Scale image to grow dynamically */
+    }
+}
